@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class="bg-gray-900 min-h-screen 
+             flex items-center 
+             justify-center">
+
+    <div class="bg-gray-800 rounded-2xl 
+                p-8 w-96 text-white">
+
+        <!-- Heading -->
+        <h1 class="text-3xl font-bold 
+                   text-center mb-6">
+            🌤️ Weather App
+        </h1>
+
+        <!-- Search Bar -->
+        <div class="flex gap-2 mb-6">
+            <input type="text" id="cityInput" placeholder="City likho..." class="flex-1 bg-gray-700 
+                       rounded-lg px-4 py-2 
+                       outline-none text-white" />
+            <button id="searchBtn" class="bg-blue-500 px-4 py-2 
+                       rounded-lg font-bold
+                       hover:bg-blue-600 cursor-pointer">
+                Search
+            </button>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error" class="text-red-400 
+                    text-center mb-4 hidden">
+            City nahi mili! ❌
+        </div>
+
+        <!-- Weather Card -->
+        <div id="weatherCard" class="hidden">
+
+            <!-- City Name -->
+            <h2 id="cityName" class="text-2xl font-bold 
+                       text-center">
+            </h2>
+
+            <!-- Weather Icon -->
+            <div class="text-center my-4">
+                <img id="weatherIcon" src="" alt="weather" class="mx-auto w-20">
+            </div>
+
+            <!-- Temperature -->
+            <p id="temp" class="text-5xl font-bold 
+                      text-center text-blue-400">
+            </p>
+
+            <!-- Description -->
+            <p id="desc" class="text-center 
+                      capitalize mt-2 
+                      text-gray-300">
+            </p>
+
+            <!-- Details -->
+            <div class="grid grid-cols-2 
+                        gap-4 mt-6">
+
+                <!-- Humidity -->
+                <div class="bg-gray-700 
+                            rounded-xl p-4 
+                            text-center">
+                    <p class="text-gray-400">
+                        💧 Humidity
+                    </p>
+                    <p id="humidity" class="text-xl 
+                              font-bold mt-1">
+                    </p>
+                </div>
+
+                <!-- Wind -->
+                <div class="bg-gray-700 
+                            rounded-xl p-4 
+                            text-center">
+                    <p class="text-gray-400">
+                        💨 Wind
+                    </p>
+                    <p id="wind" class="text-xl 
+                              font-bold mt-1">
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="text-center hidden">
+            <p class="text-gray-400">
+                Loading... ⏳
+            </p>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

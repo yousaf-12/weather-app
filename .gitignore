@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment variables and API secrets
+.env
+.env.*
+
+# Build output
+dist/
+build/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
